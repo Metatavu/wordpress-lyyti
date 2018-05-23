@@ -8,7 +8,7 @@ TODO
 
 #### lyyti-list-events
 
-You can use *lyyti-list-events* -shortcode for listing event's from Lyyti. Shortcode sholid be placed inside page content in Wordpress.
+You can use **lyyti-list-events** -shortcode for listing event's from Lyyti. Shortcode sholid be placed inside page content in Wordpress.
 
 You can use following options:
 
