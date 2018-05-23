@@ -1,12 +1,12 @@
 # wordpress-lyyti
 
-### Instalation
+## Instalation
 
 TODO
 
-### Usage
+## Usage
 
-#### lyyti-list-events
+### lyyti-list-events
 
 You can use **lyyti-list-events** -shortcode for listing event's from Lyyti. Shortcode sholid be placed inside page content in Wordpress.
 
