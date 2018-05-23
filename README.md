@@ -2,8 +2,22 @@
 
 ## Instalation
 
-TODO
+Download latest release zip-file from https://github.com/Metatavu/wordpress-lyyti/releases and unzip the file into Wordpress /wp-content/plugins -folder.
 
+After that activate the plugin via 'Plugins' menu from Wordpress administration view.
+
+## Configuration
+
+Plugin can be configured via Wordpress admin menu Settings > Lyyti Settings.
+
+### API Settings
+
+These settings specify how the plugin connects to the API.
+
+  - API URL - `URL into Lyyti API (e.g. https://api.lyyti.com/v2)`
+  - Public Key	- `Public API key (e.g. apitesti)`
+  - Private Key	- `Private API key (e.g. asdasdasd123)`
+    
 ## Usage
 
 ### lyyti-list-events
