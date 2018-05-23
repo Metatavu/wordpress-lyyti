@@ -65,7 +65,11 @@ Example:
 
 You can customize how event list renders events. 
 
-lyyti/events.php
+### Example
+
+This is an example of simple customization for events. 
+
+**lyyti/events.php**
 
     <?php
       function getLocalizedLyytiProperty($property, $locales) {
@@ -83,7 +87,7 @@ lyyti/events.php
       }
     ?>
 
-lyyti/event.php
+**lyyti/event.php**
 
     <?php
       $locales = ["en", "fi"];
