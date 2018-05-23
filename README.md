@@ -61,3 +61,24 @@ Example:
 
     [lyyti-list-events archived=0]
 
+## Customization
+
+You can customize how event list renders events. 
+
+lyyti/events.php
+
+    <?php
+      function getLocalizedLyytiProperty($property, $locales) {
+        foreach ($locales as $locale) {
+          if (!empty($property[$locale])) {
+            return $property[$locale];
+          }
+        }
+
+        return '';
+      }
+
+      foreach ($data->events as $event) {
+        include "event.php";
+      }
+    ?>
