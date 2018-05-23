@@ -21,6 +21,7 @@
         $this->filter_prefix = 'lyyti';
         $this->theme_template_directory = 'lyyti';
         $this->plugin_directory = LYYTI_PLUGIN_DIR;
+        $this->plugin_template_directory = 'default-templates';
       }
     }
   }
