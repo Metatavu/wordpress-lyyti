@@ -1,4 +1,4 @@
-# wordpress-lyyti
+# Wordpress integration for Lyyti
 
 ## Instalation
 
