@@ -31,10 +31,10 @@ You can use following options:
   If omitted, all authorized events are returned.</li>
   <li><b>category: integer</b>
   Only list events with a category ID that matches this parameter (including any sub-categories of the given category).</li>
-  <li><b>start_time: timestamp</b>
-  This filter can be for example "123456" (exact second), "-123456" (before, inclusive), "123456-" (after, inclusive) or "1230-1240" (range, inclusive).</li>
-  <li><b>end_time: timestamp</b>
-  This filter can be for example "123456" (exact second), "-123456" (before, inclusive), "123456-" (after, inclusive) or "1230-1240" (range, inclusive).</li>
+  <li><b>start_time: timestamp OR (now, yearstart, yearend)</b>
+  This filter can be for example "123456" (exact second), "-123456" (before, inclusive), "123456-" (after, inclusive) or "1230-1240" (range, inclusive). You can use words now, yearstart or yearend instead of timestamps. Filter now uses current timestamp, yearstart filter uses timestamp of first day of the current year and yearend filter uses timestamp of last day of the current year.</li>
+  <li><b>end_time: timestamp OR (now, yearstart, yearend)</b>
+  This filter can be for example "123456" (exact second), "-123456" (before, inclusive), "123456-" (after, inclusive) or "1230-1240" (range, inclusive). You can use words now, yearstart or yearend instead of timestamps. Filter now uses current timestamp, yearstart filter uses timestamp of first day of the current year and yearend filter uses timestamp of last day of the current year.</li>
   <li><b>enrollment_open: timestamp</b>
   This filter can be for example "123456" (exact second), "-123456" (before, inclusive), "123456-" (after, inclusive) or "1230-1240" (range, inclusive).</li>
   <li><b>enrollment_deadline: timestamp</b>
