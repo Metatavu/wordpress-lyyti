@@ -35,14 +35,14 @@ You can use following options:
   This filter can be for example "123456" (exact second), "-123456" (before, inclusive), "123456-" (after, inclusive) or "1230-1240" (range, inclusive). You can use words now, yearstart or yearend instead of timestamps. Filter now uses current timestamp, yearstart filter uses timestamp of first day of the current year and yearend filter uses timestamp of last day of the current year.</li>
   <li><b>end_time: timestamp OR (now, yearstart, yearend)</b>
   This filter can be for example "123456" (exact second), "-123456" (before, inclusive), "123456-" (after, inclusive) or "1230-1240" (range, inclusive). You can use words now, yearstart or yearend instead of timestamps. Filter now uses current timestamp, yearstart filter uses timestamp of first day of the current year and yearend filter uses timestamp of last day of the current year.</li>
-  <li><b>enrollment_open: timestamp</b>
-  This filter can be for example "123456" (exact second), "-123456" (before, inclusive), "123456-" (after, inclusive) or "1230-1240" (range, inclusive).</li>
-  <li><b>enrollment_deadline: timestamp</b>
-  This filter can be for example "123456" (exact second), "-123456" (before, inclusive), "123456-" (after, inclusive) or "1230-1240" (range, inclusive).</li>
-  <li><b>canceling_deadline: timestamp</b>
-  This filter can be for example "123456" (exact second), "-123456" (before, inclusive), "123456-" (after, inclusive) or "1230-1240" (range, inclusive).</li>
-  <li><b>editing_deadline: timestamp</b>
-  This filter can be for example "123456" (exact second), "-123456" (before, inclusive), "123456-" (after, inclusive) or "1230-1240" (range, inclusive).</li>
+  <li><b>enrollment_open: timestamp OR (now, yearstart, yearend)</b>
+  This filter can be for example "123456" (exact second), "-123456" (before, inclusive), "123456-" (after, inclusive) or "1230-1240" (range, inclusive). You can use words now, yearstart or yearend instead of timestamps. Filter now uses current timestamp, yearstart filter uses timestamp of first day of the current year and yearend filter uses timestamp of last day of the current year.</li>
+  <li><b>enrollment_deadline: timestamp OR (now, yearstart, yearend)</b>
+  This filter can be for example "123456" (exact second), "-123456" (before, inclusive), "123456-" (after, inclusive) or "1230-1240" (range, inclusive). You can use words now, yearstart or yearend instead of timestamps. Filter now uses current timestamp, yearstart filter uses timestamp of first day of the current year and yearend filter uses timestamp of last day of the current year.</li>
+  <li><b>canceling_deadline: timestamp OR (now, yearstart, yearend)</b>
+  This filter can be for example "123456" (exact second), "-123456" (before, inclusive), "123456-" (after, inclusive) or "1230-1240" (range, inclusive). You can use words now, yearstart or yearend instead of timestamps. Filter now uses current timestamp, yearstart filter uses timestamp of first day of the current year and yearend filter uses timestamp of last day of the current year.</li>
+  <li><b>editing_deadline: timestamp OR (now, yearstart, yearend)</b>
+  This filter can be for example "123456" (exact second), "-123456" (before, inclusive), "123456-" (after, inclusive) or "1230-1240" (range, inclusive). You can use words now, yearstart or yearend instead of timestamps. Filter now uses current timestamp, yearstart filter uses timestamp of first day of the current year and yearend filter uses timestamp of last day of the current year.</li>
   <li><b>hide_custom_field_options: integer</b>
   All event custom field options are included in every event for legacy reasons. When requesting a lot of events, this parameter sholid probably be set to 1, to hide the options. All custom field information can be found from the event_custom_fields resource.</li>
   <li><b>custom_field_id: integer</b>
