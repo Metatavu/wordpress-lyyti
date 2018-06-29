@@ -3,7 +3,7 @@
  * Created on May 22, 2018
  * Plugin Name: Wordpress Lyyti integration
  * Description: Wordpress integration for Lyyti
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Metatavu Oy
  */
 
