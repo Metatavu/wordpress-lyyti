@@ -137,25 +137,13 @@
         foreach($attributeValues as &$attributeValue) {
           if (strtolower($attributeValue) == "now") {
             $attributeValue = time();
-          }
-
-          if (strtolower($attributeValue) == "yearend") {
-            $currentYear = date("Y");
-            $lastDayOfYear = new \DateTime($currentYear . "-12-31");
-            $lastDayOfYearTimeStamp = $lastDayOfYear->getTimestamp();
-
-            $attributeValue = $lastDayOfYearTimeStamp;
-          }
-
-          if (strtolower($attributeValue) == "yearstart") {
-            $currentYear = date("Y");
-            $lastDayOfYear = new \DateTime($currentYear . "-1-1");
-            $lastDayOfYearTimeStamp = $lastDayOfYear->getTimestamp();
-
-            $attributeValue = $lastDayOfYearTimeStamp;
+          } else if (strtolower($attributeValue) == "yearend") {
+            $attributeValue = $this->getYearEndTimestamp();
+          } else if (strtolower($attributeValue) == "yearstart") {
+            $attributeValue = $this->getYearStartTimestamp();
           }
         }
-        
+
         return $start . join("-", $attributeValues) . $end;
       }
 
