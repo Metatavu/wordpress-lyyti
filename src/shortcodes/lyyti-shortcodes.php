@@ -86,6 +86,9 @@
 
         $templateLoader = new TemplateLoader();
 
+        $attrs['start_time'] = $this->parseTimeAttr($attrs['start_time']);
+        $attrs['end_time'] = $this->parseTimeAttr($attrs['end_time']);
+
         $apiClient = new ApiClient();
         $result = $apiClient->listEvents($attrs);
 
@@ -105,6 +108,78 @@
         } else {
           error_log("Error occurred while listing events:" . print_r($result, true));
         }
+      }
+
+      /**
+       * Parse time attributes
+       * 
+       * @param string $attr time attribute
+       * 
+       * @return timestamp and possibly hyphen based on attribute value
+       */
+      private function parseTimeAttr($attr) {
+        if (!$attr) {
+          return NULL;
+        }
+        
+        $start = "";
+        $end = "";
+
+        if (substr($attr, 0, 1) == "-") {
+          $attr = substr($attr, 1);
+          $start = "-"; 
+        }
+
+        if (substr($attr, -1) == "-") {
+          $attr = substr($attr, 0, -1);
+          $end = "-";
+        }
+
+        $attributeValues = explode("-", $attr);
+
+        if (count($attributeValues) <= 1) {
+          $attributeValues = array($attr);
+        }
+
+        foreach($attributeValues as &$attributeValue) {
+          if (strtolower($attributeValue) == "now") {
+            $attributeValue = time();
+          } else if (strtolower($attributeValue) == "yearend") {
+            $attributeValue = $this->getYearEndTimestamp();
+          } else if (strtolower($attributeValue) == "yearstart") {
+            $attributeValue = $this->getYearStartTimestamp();
+          }
+        }
+
+        return $start . join("-", $attributeValues) . $end;
+      }
+
+      /**
+       * Get timestamp of last day of the current year
+       * 
+       * 
+       * @return timestamp of last day of the current year
+       */
+      private function getYearEndTimestamp () {
+        $currentYear = date("Y");
+        $lastDayOfYear = new \DateTime($currentYear . "-12-31");
+        $lastDayOfYearTimeStamp = $lastDayOfYear->getTimestamp();
+
+        return $lastDayOfYearTimeStamp;
+      }
+
+      /**
+       * Get timestamp of first day of the current year
+       * 
+       * 
+       * @return timestamp of first day of the current year
+       */
+      private function getYearStartTimestamp () {
+        $currentYear = date("Y");
+        $lastDayOfYear = new \DateTime($currentYear . "-1-1");
+        $lastDayOfYearTimeStamp = $lastDayOfYear->getTimestamp();
+
+        return $lastDayOfYearTimeStamp;
       }
       
     }
