@@ -110,6 +110,13 @@
         }
       }
 
+      /**
+       * Parse time attributes
+       * 
+       * @param string $attr time attribute
+       * 
+       * @return timestamp based on attribute value
+       */
       private function parseTimeAttr($attr) {
         if (!$attr) {
           return NULL;
@@ -147,6 +154,12 @@
         return $start . join("-", $attributeValues) . $end;
       }
 
+      /**
+       * Get timestamp of last day of the current year
+       * 
+       * 
+       * @return timestamp of last day of the current year
+       */
       private function getYearEndTimestamp () {
         $currentYear = date("Y");
         $lastDayOfYear = new \DateTime($currentYear . "-12-31");
@@ -155,6 +168,12 @@
         return $lastDayOfYearTimeStamp;
       }
 
+      /**
+       * Get timestamp of first day of the current year
+       * 
+       * 
+       * @return timestamp of first day of the current year
+       */
       private function getYearStartTimestamp () {
         $currentYear = date("Y");
         $lastDayOfYear = new \DateTime($currentYear . "-1-1");
