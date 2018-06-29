@@ -115,7 +115,7 @@
        * 
        * @param string $attr time attribute
        * 
-       * @return timestamp based on attribute value
+       * @return timestamp and possibly hyphen based on attribute value
        */
       private function parseTimeAttr($attr) {
         if (!$attr) {
